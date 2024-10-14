@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import tailwindForm from "@tailwindcss/forms";
 
 const config: Config = {
   content: [
@@ -8,12 +9,18 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["var(--font-montserrat)"],
+      },
+      boxShadow: {
+        sm: "0px 1px 4px 0px #21212114",
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
     },
   },
-  plugins: [],
+  plugins: [tailwindForm],
 };
 export default config;
